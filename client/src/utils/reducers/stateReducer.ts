@@ -1,5 +1,6 @@
 interface State {
-    filter: string
+    filter: string,
+    projects: object[]
 };
 
 interface Action { 
@@ -7,7 +8,7 @@ interface Action {
     payload: string 
 }
 
-export const stateReducer = (state: State = {filter: ""}, action: Action) => {
+export const stateReducer = (state: State = {filter: "", projects: []}, action: Action) => {
     switch(action.payload) {
         case "UPDATE_FILTER":
             return {...state, filter: action.payload};
