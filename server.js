@@ -10,6 +10,16 @@ if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));
 }
 
+//connect to database or local host
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projects");
+
+// Allow server to use params
+server.use(express.urlencoded({ extended: true }));
+server.use(express.json());
+
+//Compress Data
+server.use(compression());
+
 // Send every request to the React app
 // Define any API routes before this runs
 server.get("*", function(req, res) {
