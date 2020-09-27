@@ -12,9 +12,9 @@ function MehNavBar() {
             <Navbar.Toggle aria-controls="this-nav-basic" />
             <Navbar.Collapse id="this-nav-basic" className="justify-content-end">
                 <Nav>
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/">Projects</Nav.Link>
-                    <Nav.Link href="/">Testimonials</Nav.Link>
+                    <Nav.Link href="/" className={location.pathname === "/"?"active":""}>Home</Nav.Link>
+                    <Nav.Link href="/" className={location.pathname === "/projects"?"active":""}>Projects</Nav.Link>
+                    <Nav.Link href="/" className={location.pathname === "/testimonials"?"active":""}>Testimonials</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
