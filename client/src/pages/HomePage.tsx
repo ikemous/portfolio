@@ -4,7 +4,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 
 function HomePage() {
     return(
-        <Container>
+        <Container fluid>
             <Row style={{background:"green"}}>
                 <Image 
                     style={{margin: "auto"}}
@@ -26,8 +26,29 @@ function HomePage() {
                     <a href="#contact-me">Contact</a>
                 </Col>
             </Row>
-            <Row id="about-me">
-
+            <Row style={{background: "yellow"}} id="about-me">
+                <Container>
+                    <Col></Col>
+                    <Col></Col>
+                </Container>
+            </Row>
+            <Row style={{background: "blue"}} id="current-employment">
+                <Container>
+                    <Col></Col>
+                    <Col></Col>
+                </Container>
+            </Row>
+            <Row style={{background: "yellow"}} id="connect-with-me">
+                <Container>
+                    <Col></Col>
+                    <Col></Col>
+                </Container>
+            </Row>
+            <Row style={{background: "lightblue"}} id="contact-me">
+                <Container>
+                    <Col></Col>
+                    <Col></Col>
+                </Container>
             </Row>
         </Container>
     );
