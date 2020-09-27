@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom"
 import { Col, Container, Image, Row } from "react-bootstrap";
 
 function HomePage() {
     return(
-        <Container>
+        <Container fluid>
+            <h1 className="text-center">Ike Barranco</h1>
             <Row style={{background:"green"}}>
                 <Image 
                     style={{margin: "auto"}}
@@ -35,10 +35,10 @@ function HomePage() {
                 </Col>
             </Row>
             <Row style={{background: "yellow"}} id="about-me">
-                <Col className="text-center">
+                <Col xs={12} md={6} className="text-center">
                     <h2>About Me</h2>
                 </Col>
-                <Col  className="text-left">
+                <Col xs={12} md={6} className="text-left">
                     <h3>High Scool</h3>
                     Fill this with about me information
                     <h3>College</h3>
@@ -50,20 +50,20 @@ function HomePage() {
                 </Col>
             </Row>
             <Row style={{background: "blue"}} id="current-employment">
-                <Col className="text-right">  
+                <Col xs={12} md={6} className="text-center">
+                    <h2>Current Employment</h2>
+                </Col>
+                <Col xs={12} md={6} className="text-left">  
                     <h3>Conduent</h3>
                     <h4>Title</h4>
                     <h4>Responsibilities</h4>
                 </Col>
-                <Col className="text-center">
-                    <h2>Current Employment</h2>
-                </Col>
             </Row>
             <Row style={{background: "greenyellow"}} id="connect-with-me">
-                <Col className="text-center">
+                <Col xs={12} md={6} className="text-center">
                     <h2>Connect With Me</h2>
                 </Col>
-                <Col className="text-left">
+                <Col xs={12} md={6} className="text-left">
                     <h3>facebook</h3>
                     <h3>github</h3>
                     <h3>linkedin</h3>
@@ -71,11 +71,11 @@ function HomePage() {
                 </Col>
             </Row>
             <Row style={{background: "lightblue"}} id="contact-me">
-                <Col className="text-right">
-                    Fill with information
-                </Col>
-                <Col className="text-center">
+                <Col xs={12} md={6} className="text-center">
                     <h2>Contact Me</h2>
+                </Col>
+                <Col xs={12} md={6} className="text-left">
+                    Fill with information
                 </Col>
             </Row>
         </Container>
