@@ -1,19 +1,21 @@
-import React from "react";
-import { Navbar } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Navbar, Nav } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-
+ 
 
 function MehNavBar() {
     const location = useLocation();
-    
+    useEffect(() => console.log(location), [location])
     return (
-        <Navbar>
-            <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
-            <Navbar.Toggle />
-            <Navbar.Collapse className="justify-content-end">
-                <Navbar.Text>
-                Signed in as: <a href="#login">Mark Otto</a>
-                </Navbar.Text>
+        <Navbar expand="lg">
+            <Navbar.Brand href="/">{location.pathname==="/"?"Ikemous": ""}</Navbar.Brand>
+            <Navbar.Toggle aria-controls="this-nav-basic" />
+            <Navbar.Collapse id="this-nav-basic" className="justify-content-end">
+                <Nav>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">Projects</Nav.Link>
+                    <Nav.Link href="/">Testimonials</Nav.Link>
+                </Nav>
             </Navbar.Collapse>
         </Navbar>
     );

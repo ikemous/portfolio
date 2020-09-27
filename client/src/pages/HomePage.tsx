@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Image, Row } from "react-bootstrap";
+import { Link } from "react-router-dom"
+import { Col, Container, Image, Row } from "react-bootstrap";
 
 function HomePage() {
     return(
@@ -12,6 +13,20 @@ function HomePage() {
                 />
             </Row>
             <Row style={{background: "red"}}>
+                <Col>
+                    <Link to="#about-me">About Me</Link>
+                </Col>
+                <Col>
+                    <a href="#current-employment">Employment</a>
+                </Col>
+                <Col>
+                    <a href="#connect-with-me">Connect</a>
+                </Col>
+                <Col>
+                    <a href="#contact-me">Contact</a>
+                </Col>
+            </Row>
+            <Row id="about-me">
 
             </Row>
         </Container>
