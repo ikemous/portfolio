@@ -122,7 +122,12 @@ function HomePage() {
                     <h2>Contact Me</h2>
                 </Col>
                 <Col xs={12} md={6} className="text-left">
-                    <h3>Email: <a href="mailto: barranco.ike@gmail.com?subject=Coding">barranco.ike@gmail.com</a></h3>
+                    <h3>
+                        Email: 
+                        <a href="mailto: barranco.ike@gmail.com?subject=Coding">
+                            Click Here
+                        </a>
+                    </h3>
                     <h3>Cell: 385-229-7480</h3>
                 </Col>
             </Row>
