@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, ListGroup, Row } from "react-bootstrap";
 import "./homPage.css";
 
 function HomePage() {
@@ -71,7 +71,11 @@ function HomePage() {
                     </p>
                 </Col>
             </Row>
-            <Row style={{background: "blue"}} id="current-employment">
+            <Row 
+                className="section"
+                style={{background: "blue"}} 
+                id="current-employment"
+            >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Current Employment</h2>
                 </Col>
@@ -96,23 +100,39 @@ function HomePage() {
                     </ul>
                 </Col>
             </Row>
-            <Row style={{background: "greenyellow"}} id="connect-with-me">
+            <Row 
+                className="section"
+                style={{background: "greenyellow"}} 
+                id="connect-with-me"
+            >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Connect With Me</h2>
                 </Col>
-                <Col xs={12} md={6} className="text-left">
-                    <a href="https://www.fb.gg/ikemous" rel="noopener noreferrer" target="_blank">
-                        <h3>facebook</h3>
-                    </a>
-                    <a href="https://github.com/ikemous" rel="noopener noreferrer" target="_blank">
-                        <h3>github</h3>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ike-barranco/" rel="noopener noreferrer" target="_blank">
-                        <h3>linkedin</h3>
-                    </a>
+                <Col xs={12} md={6} className="text-center">
+                    <ListGroup horizontal="lg">
+                        <ListGroup.Item className="socialItem">
+                            <a href="https://www.fb.gg/ikemous" rel="noopener noreferrer" target="_blank">
+                                <h3> <i className="fab fa-facebook" /> Facebook</h3>
+                            </a>
+                        </ListGroup.Item>
+                        <ListGroup.Item className="socialItem">
+                            <a href="https://github.com/ikemous" rel="noopener noreferrer" target="_blank">
+                                <h3><i className="fab fa-github" /> Github</h3>
+                            </a>
+                        </ListGroup.Item>
+                        <ListGroup.Item className="socialItem">
+                            <a href="https://www.linkedin.com/in/ike-barranco/" rel="noopener noreferrer" target="_blank">
+                                <h3><i className="fab fa-linkedin" /> LinkedIn</h3>
+                            </a>
+                        </ListGroup.Item>
+                    </ListGroup>
                 </Col>
             </Row>
-            <Row style={{background: "lightblue"}} id="contact-me">
+            <Row 
+                className="section"
+                style={{background: "lightblue"}} 
+                id="contact-me"
+            >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Contact Me</h2>
                 </Col>
