@@ -1,10 +1,10 @@
 import React from "react";
 
-function PortfolioPage() {
+function ProjectPage() {
     return (
         <>
         </>
     );
 };
 
-export default PortfolioPage;
+export default ProjectPage;

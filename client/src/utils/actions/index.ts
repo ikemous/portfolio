@@ -5,4 +5,9 @@ export const updateFilter = (search: string): object => {
     }
 };
 
-export {};
+export const updateProjects = (projects: object[]) : object => {
+    return {
+        type: "UPDATE_PROJECTS",
+        payload: projects
+    };
+};

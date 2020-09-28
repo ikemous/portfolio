@@ -5,13 +5,15 @@ interface State {
 
 interface Action { 
     type: string,
-    payload: string 
+    payload: string | object[]
 }
 
 export const stateReducer = (state: State = {filter: "", projects: []}, action: Action) => {
     switch(action.payload) {
         case "UPDATE_FILTER":
             return {...state, filter: action.payload};
+        case "UPDATE_PROJECTS":
+            return {...state, projects: action.payload};
         default:
             return state;
     };
