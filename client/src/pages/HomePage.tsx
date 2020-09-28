@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import "./homPage.css";
 
 function HomePage() {
     return(
@@ -34,8 +35,12 @@ function HomePage() {
                     </a>
                 </Col>
             </Row>
-            <Row style={{background: "yellow"}} id="about-me">
-                <Col xs={12} md={6} className="text-center">
+            <Row 
+                className="section"
+                style={{background: "yellow"}} 
+                id="about-me"
+            >
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>About Me</h2>
                 </Col>
                 <Col xs={12} md={6} className="text-left">
@@ -61,13 +66,13 @@ function HomePage() {
                     <h3>Continued Education</h3>
                     <p>
                         After Finishing Trilogy's Coding Bootcamp, I started learning items to
-                        extend what i've learned from the course. Some of these languages 
+                        extend what i've learned from the course. Some of these technologies 
                         include Typescript, React-Redux, and Amazon Web Services(AWS)
                     </p>
                 </Col>
             </Row>
             <Row style={{background: "blue"}} id="current-employment">
-                <Col xs={12} md={6} className="text-center">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Current Employment</h2>
                 </Col>
                 <Col xs={12} md={6} className="text-left">  
@@ -92,7 +97,7 @@ function HomePage() {
                 </Col>
             </Row>
             <Row style={{background: "greenyellow"}} id="connect-with-me">
-                <Col xs={12} md={6} className="text-center">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Connect With Me</h2>
                 </Col>
                 <Col xs={12} md={6} className="text-left">
@@ -108,11 +113,12 @@ function HomePage() {
                 </Col>
             </Row>
             <Row style={{background: "lightblue"}} id="contact-me">
-                <Col xs={12} md={6} className="text-center">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
                     <h2>Contact Me</h2>
                 </Col>
                 <Col xs={12} md={6} className="text-left">
-                    Fill with information
+                    <h3>Email: <a href="mailto: barranco.ike@gmail.com?subject=Coding">barranco.ike@gmail.com</a></h3>
+                    <h3>Cell: 385-229-7480</h3>
                 </Col>
             </Row>
         </Container>
