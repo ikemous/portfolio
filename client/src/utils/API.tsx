@@ -1,10 +1,9 @@
 import axios from "axios";
 
 export default {
-    getProjects() {
-        return axios.get("/projects");
-    },
-    getFilteredProjects(filter:string) {
-        return axios.get(`/projects/:${filter}`)
+    getProjects(filter:string) {
+        if(filter === "") return axios.get("/projects");
+        console.log("filter")
+        return axios.get(`/projects/${filter}`)
     },
 };

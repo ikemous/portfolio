@@ -11,7 +11,7 @@ function MehNavBar() {
             <Navbar.Brand href="/">Ikemous -&#160;
                 {
                     location.pathname==="/"?"Home":
-                    location.pathname==="/projects"?"Projects":
+                    location.pathname==="/portfolio"?"Portfolio":
                     location.pathname==="/testimonials"?"Testimonials":
                     ""
                 }

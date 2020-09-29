@@ -8,8 +8,6 @@ export const updateFilter = (search: string): object => {
 };
 
 export const updateProjects = (projects: object[]) : object => {
-    API.getProjects().then(data => console.log(data))
-        .catch(err => console.log(err))
     return {
         type: "UPDATE_PROJECTS",
         payload: projects

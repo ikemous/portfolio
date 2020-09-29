@@ -12,6 +12,7 @@ module.exports={
     },
     findByFilter({params}, res)
     {
+        console.log(params)
         db.Project.find({skills: { $regex: params.filter }})
         .then(collection => res.json(collection))
         .catch(error => res.status(422).jso4n(err));

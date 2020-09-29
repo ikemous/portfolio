@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import options from "../utils/options";
-import { useDispatch } from "react-redux";
+import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { updateFilter, updateProjects } from "../utils/actions"
 import { Form, Button, Col } from "react-bootstrap";
+import API from "../utils/API";
+import options from "../utils/options";
 
 interface Option {
     key: string, 
@@ -13,31 +14,45 @@ interface Option {
 function FilterProjectsForm() {
 
     const dispatch = useDispatch();
+    const { filter } = useSelector((state:RootStateOrAny) => state.global);
     
     useEffect(() => {
-        dispatch(updateProjects([]))
+        get();
     }, [])
+
+    const get = () => {
+        API.getProjects(filter)
+        .then(({ data }) => {
+            console.log(data);
+            dispatch(updateProjects(data));
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    };
+
     const changeSelection = ({ target }: any) => {
         if(target.value==="Select All") return dispatch(updateFilter(""));
         dispatch(updateFilter(target.value));
     };
 
     return (
-        <Form>
+        <Form onSubmit={get}>
             <Form className="align-items-center">
                 <Form.Row>
                     <Col sm={2}/>
                     <Col xs={8} sm={8}>
                         <Form.Control 
                             onChange={changeSelection} 
-                            id="selection" as="select" 
+                            id="selection" 
+                            as="select" 
                             custom
                         >
                             {options.map((option:Option) => <option key={option.key} value={option.value}>{option.text}</option>)}
                         </Form.Control>
                     </Col>
                     <Col xs={2} sm={2}>
-                        <Button variant="success">Filter</Button>
+                        <Button onClick={get} variant="success">Filter</Button>
                     </Col>
                 </Form.Row>
             </Form>
