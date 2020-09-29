@@ -13,7 +13,8 @@ function FilterProjectsForm() {
         <Form>
             <Form className="align-items-center">
                 <Form.Row>
-                    <Col xs={10}>
+                    <Col lg={2}/>
+                    <Col xs={8}>
                         <Form.Control id="selection" as="select" custom>
                             {options.map((option:Option) => <option key={option.key} value={option.value}>{option.text}</option>)}
                         </Form.Control>

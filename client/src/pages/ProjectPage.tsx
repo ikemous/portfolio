@@ -4,7 +4,7 @@ import FilterProjectsForm from "../components/FilterProjectsForm";
 
 function ProjectPage() {
     return (
-        <Container>
+        <Container fluid>
             <FilterProjectsForm />
         </Container>
     );
