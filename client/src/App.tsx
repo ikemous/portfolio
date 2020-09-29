@@ -11,7 +11,7 @@ function App() {
       <MehNavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/projects" component={ProjectPage} />
+        <Route exact path="/portfolio" component={ProjectPage} />
       </Switch>
     </Router>
   );

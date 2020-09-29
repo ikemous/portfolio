@@ -1,4 +1,4 @@
-import API from "../API";
+import API from "../API"
 
 export const updateFilter = (search: string): object => {
     return {
@@ -8,6 +8,8 @@ export const updateFilter = (search: string): object => {
 };
 
 export const updateProjects = (projects: object[]) : object => {
+    API.getProjects().then(data => console.log(data))
+        .catch(err => console.log(err))
     return {
         type: "UPDATE_PROJECTS",
         payload: projects

@@ -20,7 +20,7 @@ function MehNavBar() {
             <Navbar.Collapse id="this-nav-basic" className="justify-content-end">
                 <Nav>
                     <Nav.Link href="/" className={location.pathname === "/"?"active":""}>Home</Nav.Link>
-                    <Nav.Link href="/projects" className={location.pathname === "/projects"?"active":""}>Projects</Nav.Link>
+                    <Nav.Link href="/portfolio" className={location.pathname === "/portfolio"?"active":""}>Portfolio</Nav.Link>
                     <Nav.Link href="/" className={location.pathname === "/testimonials"?"active":""}>Testimonials</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

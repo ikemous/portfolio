@@ -5,7 +5,10 @@ module.exports={
     {
         db.Project.find({})
         .then(collections => res.json(collections))
-        .catch(error => res.status(422).json(error));
+        .catch(error => {
+            console.log("error");
+            res.status(422).json(error)
+        });
     },
     findByFilter({params}, res)
     {
