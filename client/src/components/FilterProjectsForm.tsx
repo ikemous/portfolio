@@ -14,6 +14,11 @@ function FilterProjectsForm() {
 
     const dispatch = useDispatch();
 
+    const changeSelection = ({ target }: any) => {
+        if(target.value==="Select All") return dispatch(updateFilter(""));
+        dispatch(updateFilter(target.value));
+    };
+
     return (
         <Form>
             <Form className="align-items-center">
@@ -21,7 +26,7 @@ function FilterProjectsForm() {
                     <Col sm={2}/>
                     <Col xs={8} sm={8}>
                         <Form.Control 
-                            onChange={({ target }) => dispatch(updateFilter(target.value))} 
+                            onChange={changeSelection} 
                             id="selection" as="select" 
                             custom
                         >

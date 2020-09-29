@@ -9,7 +9,7 @@ interface Action {
 }
 
 export const stateReducer = (state: State = {filter: "", projects: []}, action: Action) => {
-    switch(action.payload) {
+    switch(action.type) {
         case "UPDATE_FILTER":
             return {...state, filter: action.payload};
         case "UPDATE_PROJECTS":
