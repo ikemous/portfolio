@@ -1,0 +1,25 @@
+.projectCard {
+    margin: auto;
+    height: 100%;
+}
+
+.projectImage {
+    object-fit: scale-down;
+    height: 20vh;
+}
+
+.projectDescription {
+    padding-bottom: 1rem;
+}
+
+.rightButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px
+}
+
+.leftButton {
+    position: absolute;
+    bottom: 5px;
+    left: 5px
+}
