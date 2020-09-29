@@ -8,7 +8,7 @@ interface Props{
 }
 
 function RadProjectCard({ project }: Props) {
-    console.log(project);
+    console.log(project.deployedURL==="");
     return (
         <Card className="projectCard">
             <Card.Img className="projectImage" variant="top" src={project.imageRoute|| "https://via.placeholder.com/150"} />
@@ -31,10 +31,11 @@ function RadProjectCard({ project }: Props) {
                 <Button
                     className="rightButton"
                     as="a" 
-                    href={project.deployedURL} 
+                    href={project.deployedURL!==""?project.deployedURL:"https://www.fg.gg/ikemous"} 
                     rel="noopener noreferrer" 
                     target="_blank"
                     variant="primary"
+                    disabled={project.deployedURL===""}
                 >
                     <i className="fas fa-globe"></i>
                 </Button>
