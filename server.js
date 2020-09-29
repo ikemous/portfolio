@@ -19,6 +19,8 @@ server.use(express.json());
 
 //Compress Data
 server.use(compression());
+//Routes
+server.use(require("./route/project-routes"))
 
 // Send every request to the React app
 // Define any API routes before this runs
