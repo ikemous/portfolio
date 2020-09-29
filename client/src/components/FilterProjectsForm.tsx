@@ -13,13 +13,13 @@ function FilterProjectsForm() {
         <Form>
             <Form className="align-items-center">
                 <Form.Row>
-                    <Col lg={2}/>
-                    <Col xs={8}>
+                    <Col sm={2}/>
+                    <Col xs={8} sm={8}>
                         <Form.Control id="selection" as="select" custom>
                             {options.map((option:Option) => <option key={option.key} value={option.value}>{option.text}</option>)}
                         </Form.Control>
                     </Col>
-                    <Col xs={2}>
+                    <Col xs={2} sm={2}>
                         <Button variant="success">Filter</Button>
                     </Col>
                 </Form.Row>

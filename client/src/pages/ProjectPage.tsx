@@ -6,6 +6,9 @@ function ProjectPage() {
     return (
         <Container fluid>
             <FilterProjectsForm />
+            <Row lg={4} className="justify-content-md-center">
+
+            </Row>
         </Container>
     );
 };
