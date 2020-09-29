@@ -6,7 +6,8 @@ interface Option {
     key: string, 
     value: string,
     text: string
-}
+};
+
 function FilterProjectsForm() {
     return (
         <Form>
