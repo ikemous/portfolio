@@ -3,7 +3,12 @@ const path = require("path");
 const compression = require("compression");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
+require('dotenv').config()
 const server = express();
+
+//Compress Data
+server.use(compression());
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -17,10 +22,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projects");
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
-//Compress Data
-server.use(compression());
 //Routes
-server.use(require("./route/project-routes"))
+const projectRoutes = require("./routes/projectRoutes");
+server.use(projectRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs

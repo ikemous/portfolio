@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
+import API from "../utils/API";
 import { Container, Row } from "react-bootstrap";
-import { RootStateOrAny, useSelector } from "react-redux";
+import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
 import FilterProjectsForm from "../components/FilterProjectsForm";
 
 function ProjectPage() {
-    const { filter } = useSelector((state:RootStateOrAny) => state.global);
-
-    useEffect(() => {
-        console.log(`Filter: ${filter}`);
-    }, [filter]);
-
     return (
         <Container fluid>
             <FilterProjectsForm />

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import options from "../utils/options";
 import { useDispatch } from "react-redux";
-import { updateFilter } from "../utils/actions"
+import { updateFilter, updateProjects } from "../utils/actions"
 import { Form, Button, Col } from "react-bootstrap";
 
 interface Option {
@@ -13,7 +13,10 @@ interface Option {
 function FilterProjectsForm() {
 
     const dispatch = useDispatch();
-
+    
+    useEffect(() => {
+        dispatch(updateProjects([]))
+    }, [])
     const changeSelection = ({ target }: any) => {
         if(target.value==="Select All") return dispatch(updateFilter(""));
         dispatch(updateFilter(target.value));

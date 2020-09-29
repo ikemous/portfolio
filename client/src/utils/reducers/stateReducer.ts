@@ -6,7 +6,7 @@ interface State {
 interface Action { 
     type: string,
     payload: string | object[]
-}
+};
 
 export const stateReducer = (state: State = {filter: "", projects: []}, action: Action) => {
     switch(action.type) {
