@@ -13,3 +13,10 @@ export const updateProjects = (projects: object[]) : object => {
         payload: projects
     };
 };
+
+export const updatePagnation = (pagnationPostion: number): object => {
+    return {
+        type: "UPDATE_PAGNATION",
+        payload: pagnationPostion
+    }  
+};

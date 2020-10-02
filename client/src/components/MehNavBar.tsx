@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 
 function MehNavBar() {
     const location = useLocation();
-    useEffect(() => console.log(location), [location])
     return (
         <Navbar expand="lg">
             <Navbar.Brand href="/">Ikemous -&#160;

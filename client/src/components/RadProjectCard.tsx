@@ -8,7 +8,6 @@ interface Props{
 }
 
 function RadProjectCard({ project }: Props) {
-    console.log(project.deployedURL==="");
     return (
         <Card className="projectCard">
             <Card.Img className="projectImage" variant="top" src={project.imageRoute|| "https://via.placeholder.com/150"} />
