@@ -1,7 +1,8 @@
 import React from "react";
+import EmployMePlease from "../components/EmployMePlease";
 import FollowTheseBro from "../components/FollowTheseBro";
-import { Col, Container, Image, ListGroup, Row } from "react-bootstrap";
-import "./homPage.css";
+import { Col, Container, Image, Row } from "react-bootstrap";
+import "./homePage.css";
 
 function HomePage() {
     return(
@@ -14,6 +15,8 @@ function HomePage() {
                     roundedCircle
                 />
             </Row>
+            <h2 className="text-center">Resume</h2>
+            <EmployMePlease />
             <Row className="text-center" style={{background: "red"}}>
                 <Col>
                     <a href="#about-me">
