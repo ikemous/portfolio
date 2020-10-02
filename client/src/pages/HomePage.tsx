@@ -18,22 +18,22 @@ function HomePage() {
             <h2 className="text-center">Resume</h2>
             <EmployMePlease />
             <Row className="text-center" style={{background: "red"}}>
-                <Col>
+                <Col xs={12} md={3} >
                     <a href="#about-me">
                         <h3>About</h3>
                     </a>
                 </Col>
-                <Col>
+                <Col xs={12} md={3} >
                     <a href="#current-employment">
                         <h3>Employment</h3>
                     </a>
                 </Col>
-                <Col>
+                <Col xs={12} md={3} >
                     <a href="#connect-with-me">
                         <h3>Connect</h3>
                     </a>
                 </Col>
-                <Col>
+                <Col xs={12} md={3} >
                     <a href="#contact-me">
                         <h3>Contact</h3>
                     </a>
