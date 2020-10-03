@@ -24,28 +24,26 @@ function ProjectPage() {
     }, [projects, pagnationPosition]);
     
     return (
-        <>
-            <Container fluid>
-                <FilterProjectsForm />
-                <Row className="justify-content-md-center projectsRow">
-                    {show?
-                        show.map((item:Project) => 
-                            <Col 
-                                className="projectColumn"
-                                xs={12} md={6} lg={3} 
-                                key={item._id}>
-                                <RadProjectCard project={item}/>
-                            </Col>
-                        )
-                        :
-                            <></>
-                    }
-                </Row>
-                <Row className="justify-content-md-center">
-                    <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
-                </Row>
-            </Container>
-        </>
+        <Container style={{minHeight: "calc(100vh - 112px)"}} fluid>
+            <FilterProjectsForm />
+            <Row className="justify-content-center projectsRow">
+                {show?
+                    show.map((item:Project) => 
+                        <Col 
+                            className="projectColumn"
+                            xs={12} md={6} lg={3} 
+                            key={item._id}>
+                            <RadProjectCard project={item}/>
+                        </Col>
+                    )
+                    :
+                        <></>
+                }
+            </Row>
+            <Row className="justify-content-center">
+                <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
+            </Row>
+        </Container>
     );
 };
 
