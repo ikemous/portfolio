@@ -10,12 +10,10 @@ interface Props {
 
 function Pagnation({ length, pagnationPosition }: Props) {
 
-    const sections:Number = length % 8;
+    const sections:number = Math.floor(length / 8) + 1;
     const dispatch = useDispatch();
 
     const handlePagnationClick = ({target}:any) => {
-        console.log(target);
-        console.log(target.text);
         if(target.text)dispatch(updatePagnation(parseInt(target.text)))
     };
 
@@ -37,11 +35,11 @@ function Pagnation({ length, pagnationPosition }: Props) {
 
     return (
         <Pagination>
-            <Pagination.First disabled={pagnationPosition===1?true:false} />
-            <Pagination.Prev disabled={pagnationPosition===1?true:false} />
+            <Pagination.First onClick={() => dispatch(updatePagnation(1))} disabled={pagnationPosition===1?true:false} />
+            <Pagination.Prev  onClick={() => dispatch(updatePagnation(pagnationPosition - 1))} disabled={pagnationPosition===1?true:false} />
             {length > 0?renderPagnationSections():<></>}
-            <Pagination.Next disabled={pagnationPosition===sections?true:false} />
-            <Pagination.Last disabled={pagnationPosition===sections?true:false} />
+            <Pagination.Next onClick={() => dispatch(updatePagnation(pagnationPosition + 1))} disabled={pagnationPosition===sections?true:false} />
+            <Pagination.Last onClick={() => dispatch(updatePagnation(sections))} disabled={pagnationPosition===sections?true:false} />
         </Pagination>
     )
 }
