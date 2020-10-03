@@ -24,6 +24,7 @@ function ProjectPage() {
     }, [projects, pagnationPosition]);
     
     return (
+        <>
         <Container style={{minHeight: "calc(100vh - 112px)"}} fluid>
             <FilterProjectsForm />
             <Row className="justify-content-center projectsRow">
@@ -40,10 +41,13 @@ function ProjectPage() {
                         <></>
                 }
             </Row>
+        </Container>
+        <Container>
             <Row className="justify-content-center">
                 <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
             </Row>
         </Container>
+        </>
     );
 };
 
