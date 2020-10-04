@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import MoveMeToTop from "../components/MoveMeToTop"
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
 import { Project } from "../utils/types";
@@ -50,6 +51,7 @@ function ProjectPage() {
                 <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
             </Row>
         </Container>
+        <MoveMeToTop />
         </>
     );
 };
