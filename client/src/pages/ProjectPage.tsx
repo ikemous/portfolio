@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
-import { Project } from "../utils/types";
+import React, { Suspense, useEffect } from "react";
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
-import { updateShow } from "../utils/actions";
+import { Project } from "../utils/types";
+import { setLoading, updateShow } from "../utils/actions";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import FilterProjectsForm from "../components/FilterProjectsForm";
 import "./projectPage.css"
 
+// const Loader = React.lazy(() =>  )
+
 function ProjectPage() {
-    const { projects, pagnationPosition, show } = useSelector((state: RootStateOrAny) => state.global);
+    const { projects, pagnationPosition, show, loading, noProjects } = useSelector((state: RootStateOrAny) => state.global);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -18,9 +20,7 @@ function ProjectPage() {
         {
             screen.push(projects[i]);
         }
-        console.log(screen);
         dispatch(updateShow(screen));
-        console.log(show);
     }, [projects, pagnationPosition]);
     
     return (
@@ -28,7 +28,14 @@ function ProjectPage() {
         <Container style={{minHeight: "calc(100vh - 112px)"}} fluid>
             <FilterProjectsForm />
             <Row className="justify-content-center projectsRow">
-                {show?
+                {loading?
+                    <Spinner animation="border" role="status">
+                        <span className="sr-only">Loading...</span>
+                    </Spinner>
+                    :
+                    noProjects?
+                        <h1 className="text-center">Project Coming Soon</h1>
+                    :
                     show.map((item:Project) => 
                         <Col 
                             className="projectColumn"
@@ -37,8 +44,6 @@ function ProjectPage() {
                             <RadProjectCard project={item}/>
                         </Col>
                     )
-                    :
-                        <></>
                 }
             </Row>
         </Container>

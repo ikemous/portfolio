@@ -26,3 +26,17 @@ export const updateShow = (showThese: object[]): object => {
         payload: showThese
     }  
 };
+
+export const setLoading = (loading: boolean):object => {
+    return {
+        type: "SET_LOADING",
+        payload: loading
+    }
+};
+
+export const setNoProjects = (noProjects: boolean): object => {
+    return {
+        type:"SET_NO_PROJECTS",
+        payload: noProjects
+    }
+};
