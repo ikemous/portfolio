@@ -7,7 +7,7 @@ function MehNavBar() {
     const location = useLocation();
     return (
         <Navbar expand="lg">
-            <Navbar.Brand>Ikemous -&#160;
+            <Navbar.Brand id="top">Ikemous -&#160;
                 {
                     location.pathname==="/"?"Home":
                     location.pathname==="/portfolio"?"Portfolio":

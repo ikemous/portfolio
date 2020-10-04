@@ -1,4 +1,5 @@
 import React from "react";
+import MoveMeToTop from "../components/MoveMeToTop";
 import EmployMePlease from "../components/EmployMePlease";
 import FollowTheseBro from "../components/FollowTheseBro";
 import { Col, Container, Image, Row } from "react-bootstrap";
@@ -134,6 +135,7 @@ function HomePage() {
                     <h3>Cell: 385-229-7480</h3>
                 </Col>
             </Row>
+            <MoveMeToTop />
         </Container>
     );
 };

@@ -1,14 +1,12 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
 import { Project } from "../utils/types";
-import { setLoading, updateShow } from "../utils/actions";
+import { updateShow } from "../utils/actions";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import FilterProjectsForm from "../components/FilterProjectsForm";
-import "./projectPage.css"
-
-// const Loader = React.lazy(() =>  )
+import "./projectPage.css";
 
 function ProjectPage() {
     const { projects, pagnationPosition, show, loading, noProjects } = useSelector((state: RootStateOrAny) => state.global);
