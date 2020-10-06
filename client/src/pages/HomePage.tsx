@@ -1,4 +1,5 @@
 import React from "react";
+import DottedBackground from "../components/DottedBackground";
 import MoveMeToTop from "../components/MoveMeToTop";
 import EmployMePlease from "../components/EmployMePlease";
 import FollowTheseBro from "../components/FollowTheseBro";
@@ -8,8 +9,9 @@ import "./homePage.css";
 function HomePage() {
     return(
         <Container fluid>
+            <DottedBackground />
             <h1 className="text-center">Ike Barranco</h1>
-            <Row style={{background:"green"}}>
+            <Row>
                 <Image 
                     style={{margin: "auto"}}
                     src="https://via.placeholder.com/350"
@@ -18,7 +20,7 @@ function HomePage() {
             </Row>
             <h2 className="text-center">Resume</h2>
             <EmployMePlease />
-            <Row className="text-center" style={{background: "red"}}>
+            <Row className="text-center">
                 <Col xs={12} md={3} >
                     <a href="#about-me">
                         <h3>About</h3>
@@ -42,7 +44,6 @@ function HomePage() {
             </Row>
             <Row 
                 className="section"
-                style={{background: "yellow"}} 
                 id="about-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -78,7 +79,6 @@ function HomePage() {
             </Row>
             <Row 
                 className="section"
-                style={{background: "blue"}} 
                 id="current-employment"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -107,7 +107,6 @@ function HomePage() {
             </Row>
             <Row 
                 className="section"
-                style={{background: "greenyellow"}} 
                 id="connect-with-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -119,7 +118,6 @@ function HomePage() {
             </Row>
             <Row 
                 className="section"
-                style={{background: "lightblue"}} 
                 id="contact-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
