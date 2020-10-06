@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import DottedBackground from "../components/DottedBackground";
 import MoveMeToTop from "../components/MoveMeToTop"
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
 import { Project } from "../utils/types";
-import { updatePagnation, updateShow } from "../utils/actions";
+import { updateShow } from "../utils/actions";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import FilterProjectsForm from "../components/FilterProjectsForm";
@@ -15,7 +16,6 @@ function ProjectPage() {
 
     useEffect(() => {
         const screen = [];
-        dispatch(updatePagnation(1));
         for(let i = (pagnationPosition - 1) * 8; i < projects.length && i < pagnationPosition * 8 ; i++)
         {
             screen.push(projects[i]);
@@ -26,6 +26,7 @@ function ProjectPage() {
     return (
         <>
         <Container style={{minHeight: "calc(100vh - 112px)"}} fluid>
+            <DottedBackground />
             <FilterProjectsForm />
             <Row className="justify-content-center projectsRow">
                 {loading?

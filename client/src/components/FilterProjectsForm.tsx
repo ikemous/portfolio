@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
-import { updateFilter, updateProjects, setLoading, setNoProjects } from "../utils/actions"
+import { updateFilter, updatePagnation, updateProjects, setLoading, setNoProjects } from "../utils/actions"
 import { Form, Button, Col } from "react-bootstrap";
 import API from "../utils/API";
 import options from "../utils/options";
@@ -26,6 +26,7 @@ function FilterProjectsForm() {
             console.log(data);
             if(data.length === 0) dispatch(setNoProjects(true));
             else dispatch(setNoProjects(false));
+            dispatch(updatePagnation(1));
             dispatch(updateProjects(data));
             dispatch(setLoading(false));
         })
