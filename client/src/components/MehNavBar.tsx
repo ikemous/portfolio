@@ -20,7 +20,7 @@ function MehNavBar() {
                 <Nav>
                     <Nav.Link href="/" className={location.pathname === "/"?"active":""}>Home</Nav.Link>
                     <Nav.Link href="/portfolio" className={location.pathname === "/portfolio"?"active":""}>Portfolio</Nav.Link>
-                    <Nav.Link href="/" className={location.pathname === "/testimonials"?"active":""}>Testimonials</Nav.Link>
+                    <Nav.Link href="/testimonials" className={location.pathname === "/testimonials"?"active":""}>Testimonials</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
