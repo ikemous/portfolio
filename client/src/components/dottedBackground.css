@@ -1,0 +1,77 @@
+.dot {
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    position: fixed;
+    opacity: 40%;
+}
+
+.dottedContainer {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dotOne {
+    background: red;
+    top: 20%;
+    right: 10%;
+}
+
+.dotTwo {
+    background: cyan;
+    top: 8%;
+    left: 10%;
+}
+
+.dotThree {
+    background: green;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+}
+
+.dotFour {
+    background: orange;
+    bottom: 25%;
+    left: 75%;
+}
+
+.dotFive {
+    background: lightblue;
+    bottom: 10%;
+    left: 20%;
+}
+
+.dotSix {
+    background: lightcoral;
+    left: 30%;
+    top: 30%;
+}
+
+.dotSeven {
+    background: lightgoldenrodyellow;
+    top: 50%;
+    left: -5%;
+}
+
+.dotEight {
+    background: lightseagreen;
+    bottom: -5%;
+    right: -7%;
+}
+
+.dotNine {
+    background: lightsteelblue;
+    top: -5%;
+    left: 75%;
+}
+
+@media only screen and (max-width: 720px) {
+    .dot {
+        height: 10vh;
+        width: 10vh;
+    }
+}

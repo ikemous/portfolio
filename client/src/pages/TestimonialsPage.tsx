@@ -1,11 +1,17 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import DottedBackground from "../components/DottedBackground";
+import { Container, Row } from "react-bootstrap";
 import "./testimonialsPage.css";
 
 function TestimonialsPage() {
     return (
-        <Container>
-            <h2>Would Hire Again</h2>
+        <Container className="screenHeight">
+            <Row className="align-items-center justify-content-center screenHeight">
+                <div>
+                    <h2 className="text-center">No Testimonials Yet, But You Could Be The First!</h2>
+                </div>
+            </Row>
+            <DottedBackground />
         </Container>
     );
 };
