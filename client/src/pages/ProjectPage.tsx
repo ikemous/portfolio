@@ -3,7 +3,7 @@ import MoveMeToTop from "../components/MoveMeToTop"
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
 import { Project } from "../utils/types";
-import { updateShow } from "../utils/actions";
+import { updatePagnation, updateShow } from "../utils/actions";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import FilterProjectsForm from "../components/FilterProjectsForm";
@@ -15,6 +15,7 @@ function ProjectPage() {
 
     useEffect(() => {
         const screen = [];
+        dispatch(updatePagnation(1));
         for(let i = (pagnationPosition - 1) * 8; i < projects.length && i < pagnationPosition * 8 ; i++)
         {
             screen.push(projects[i]);
