@@ -25,22 +25,22 @@ function HomePage() {
                 className="text-center"
             >
                 <Col xs={12} md={3} >
-                    <a href="#about-me">
+                    <a className="pageNav" href="#about-me">
                         <h3>About</h3>
                     </a>
                 </Col>
                 <Col xs={12} md={3} >
-                    <a href="#current-employment">
+                    <a className="pageNav" href="#current-employment">
                         <h3>Employment</h3>
                     </a>
                 </Col>
                 <Col xs={12} md={3} >
-                    <a href="#connect-with-me">
+                    <a className="pageNav" href="#connect-with-me">
                         <h3>Connect</h3>
                     </a>
                 </Col>
                 <Col xs={12} md={3} >
-                    <a href="#contact-me">
+                    <a className="pageNav" href="#contact-me">
                         <h3>Contact</h3>
                     </a>
                 </Col>
