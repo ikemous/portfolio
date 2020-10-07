@@ -9,7 +9,7 @@ interface Props{
 
 function RadProjectCard({ project }: Props) {
     return (
-        <Card className="projectCard">
+        <Card className="projectCard secondaryBackground">
             <Card.Img className="projectImage" variant="top" src={project.imageRoute|| "https://via.placeholder.com/150"} />
             <Card.Body>
                 <Card.Title className="text-center">{project.title}</Card.Title>

@@ -2,6 +2,7 @@ import React from "react"
 import { updatePagnation } from  "../utils/actions";
 import { useDispatch } from "react-redux";
 import { Pagination } from "react-bootstrap";
+import "./pagnation.css";
 
 interface Props {
     length: number;
@@ -35,7 +36,7 @@ function Pagnation({ length, pagnationPosition }: Props) {
 
     return (
         <Pagination>
-            <Pagination.First onClick={() => dispatch(updatePagnation(1))} disabled={pagnationPosition===1?true:false} />
+            <Pagination.First className="secondaryBackground" onClick={() => dispatch(updatePagnation(1))} disabled={pagnationPosition===1?true:false} />
             <Pagination.Prev  onClick={() => dispatch(updatePagnation(pagnationPosition - 1))} disabled={pagnationPosition===1?true:false} />
             {length > 0?renderPagnationSections():<></>}
             <Pagination.Next onClick={() => dispatch(updatePagnation(pagnationPosition + 1))} disabled={pagnationPosition===sections?true:false} />

@@ -14,13 +14,16 @@ function HomePage() {
             <Row>
                 <Image 
                     style={{margin: "auto"}}
-                    src="https://via.placeholder.com/350"
+                    src="/images/ikeMotorcyle.webp"
                     roundedCircle
                 />
             </Row>
             <h2 className="text-center">Resume</h2>
             <EmployMePlease />
-            <Row className="text-center">
+            <Row 
+                style={{paddingTop: "2rem", paddingBottom: "2rem"}}
+                className="text-center"
+            >
                 <Col xs={12} md={3} >
                     <a href="#about-me">
                         <h3>About</h3>
@@ -43,7 +46,7 @@ function HomePage() {
                 </Col>
             </Row>
             <Row 
-                className="section"
+                className="section secondaryBackground"
                 id="about-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -78,7 +81,7 @@ function HomePage() {
                 </Col>
             </Row>
             <Row 
-                className="section"
+                className="section secondaryBackground"
                 id="current-employment"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -106,7 +109,7 @@ function HomePage() {
                 </Col>
             </Row>
             <Row 
-                className="section"
+                className="section secondaryBackground"
                 id="connect-with-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">
@@ -117,7 +120,7 @@ function HomePage() {
                 </Col>
             </Row>
             <Row 
-                className="section"
+                className="section secondaryBackground"
                 id="contact-me"
             >
                 <Col xs={12} md={6} className="d-flex justify-content-center align-items-center text-center">

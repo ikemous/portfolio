@@ -1,4 +1,12 @@
-
 .screenHeight {
   min-height: calc(100vh - 56px);
 }
+
+.secondaryBackground {
+  background-color: #fca311!important;
+}
+
+/* Main Background - 14213d */
+/* Yellow Background - fca311 */
+/* Text Color - 000000 */
+/* Active Text - e5e5e5 */

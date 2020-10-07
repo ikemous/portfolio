@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
- 
+import "./mehNavBar.css";
 
 function MehNavBar() {
     const location = useLocation();

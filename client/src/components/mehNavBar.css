@@ -1,0 +1,20 @@
+nav {
+    font-weight: bolder;
+    /* font-size: 2rem; */
+}
+
+.nav-link {
+    color: #000000!important
+}
+
+.nav-link.active {
+    color: #e5e5e5!important;
+}
+
+.navbar-toggler.collapsed, .navbar-toggler {
+    background-color: #fca311!important;
+}
+
+.navbar-brand {
+    /* font-size: 3rem!important; */
+}
