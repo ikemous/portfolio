@@ -35,7 +35,7 @@ function Pagnation({ length, pagnationPosition }: Props) {
     };
 
     return (
-        <Pagination>
+        <Pagination className="text-center">
             <Pagination.First className="secondaryBackground" onClick={() => dispatch(updatePagnation(1))} disabled={pagnationPosition===1?true:false} />
             <Pagination.Prev  onClick={() => dispatch(updatePagnation(pagnationPosition - 1))} disabled={pagnationPosition===1?true:false} />
             {length > 0?renderPagnationSections():<></>}

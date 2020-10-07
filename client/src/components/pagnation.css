@@ -9,4 +9,14 @@
 
 .page-link {
     background-color: #fca311!important;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 2560px) { 
+    .page-link {
+        height: 5vh;
+        width: 5vh;
+        font-size: 2rem;
+        /* text-align: center; */
+    }
 }

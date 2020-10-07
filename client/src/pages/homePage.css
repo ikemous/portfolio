@@ -13,7 +13,7 @@
 
 
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2000px) {
     .section  h3, .pageNav h3{
         font-size: 2.5rem;
     }

@@ -25,7 +25,7 @@ function ProjectPage() {
     
     return (
         <>
-        <Container style={{minHeight: "calc(100vh - 112px)"}} fluid>
+        <Container className="projectsContainer" style={{minHeight: "calc(100vh - 112px)"}} fluid>
             <DottedBackground />
             <FilterProjectsForm />
             <Row className="justify-content-center projectsRow">

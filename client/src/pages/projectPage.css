@@ -7,3 +7,18 @@
 .projectColumn {
     margin-bottom: 1rem;
 }
+
+.projectsContainer {
+    min-height: calc(100vh - 112px);
+}
+
+@media only screen and (min-width: 2000px) { 
+    .projectsRow {
+        min-height: 35vh;
+    }
+
+    .projectsContainer {
+        height: 85vh!important;
+        min-height: 85vh!important;
+    }
+}

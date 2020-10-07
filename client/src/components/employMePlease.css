@@ -6,7 +6,7 @@
     color: blue;
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2000px) {
     .fa-file-pdf, .fa-file-word, .wordResume, .pdfResume   {
         font-size: 2.5rem!important;
     }
