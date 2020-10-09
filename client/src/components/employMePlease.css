@@ -7,7 +7,7 @@
 }
 
 @media only screen and (min-width: 2000px) {
-    .fa-file-pdf, .fa-file-word, .wordResume, .pdfResume   {
+    .fa-file-pdf, .fa-file-word, .wordResume h3, .pdfResume h3  {
         font-size: 2.5rem!important;
     }
 }

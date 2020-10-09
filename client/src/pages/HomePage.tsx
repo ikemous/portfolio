@@ -10,15 +10,16 @@ function HomePage() {
     return(
         <Container fluid>
             <DottedBackground />
-            <h1 className="text-center">Ike Barranco</h1>
+            <h1 className="text-center name">Ike Barranco</h1>
             <Row>
                 <Image 
-                    style={{margin: "auto"}}
+                    className="portfolioImage"
                     src="/images/ikeMotorcyle.webp"
+                    alt="ike next to a motorcycle"
                     roundedCircle
                 />
             </Row>
-            <h2 className="text-center">Resume</h2>
+            <h2 className="text-center resumeText">Resume</h2>
             <EmployMePlease />
             <Row 
                 style={{paddingTop: "2rem", paddingBottom: "2rem"}}

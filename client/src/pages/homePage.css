@@ -1,9 +1,10 @@
-.section {
+.section.secondaryBackground.row {
     border-radius: 1rem;
     padding: 2rem;
-    margin: 2rem;
-    margin-left: 1rem!important;
-    margin-right: 1rem!important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .socialItem {
@@ -11,18 +12,39 @@
     border: none!important;
 }
 
+.portfolioImage {
+    margin: auto;
+}
 
+@media only screen and (min-width: 0px) {
+    .portfolioImage {
+        height: 30vh;
+        height: 30vh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section.secondaryBackground.row {
+        margin-left: 1rem!important;
+        margin-right: 1rem!important;
+    }
+}
 
 @media only screen and (min-width: 2000px) {
     .section  h3, .pageNav h3{
         font-size: 2.5rem;
     }
 
-    .section h2 {
+    .section h2, .resumeText {
         font-size: 3rem;
     }
-
+    .name {
+        font-size: 4rem;
+    }
     .section p, .section li {
         font-size: 2rem;
+    }
+    .portfolioImage {
+        height: 35vh;
     }
 }

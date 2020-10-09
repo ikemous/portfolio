@@ -8,7 +8,7 @@ function TestimonialsPage() {
         <Container className="screenHeight">
             <Row className="align-items-center justify-content-center screenHeight">
                 <div>
-                    <h2 className="text-center">No Testimonials Yet, But You Could Be The First!</h2>
+                    <h2 className="text-center testimonialText">No Testimonials Yet, But You Could Be The First!</h2>
                 </div>
             </Row>
             <DottedBackground />

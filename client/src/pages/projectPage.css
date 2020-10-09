@@ -3,6 +3,9 @@
     margin-left: 1vh!important; */
     margin-top: 1rem;
 }
+.projectsContainer {
+    min-height: 80vh!important;
+}
 
 .projectColumn {
     margin-bottom: 1rem;
