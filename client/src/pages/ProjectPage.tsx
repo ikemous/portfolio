@@ -3,6 +3,7 @@ import DottedBackground from "../components/DottedBackground";
 import MoveMeToTop from "../components/MoveMeToTop"
 import RadProjectCard from "../components/RadProjectCard"
 import Pagnation from "../components/Pagnation";
+import { Helmet } from "react-helmet";
 import { Project } from "../utils/types";
 import { updateShow } from "../utils/actions";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
@@ -25,35 +26,39 @@ function ProjectPage() {
     
     return (
         <>
-        <Container className="projectsContainer" fluid>
-            <DottedBackground />
-            <FilterProjectsForm />
-            <Row className="justify-content-center projectsRow">
-                {loading?
-                    <Spinner animation="border" role="status">
-                        <span className="sr-only">Loading...</span>
-                    </Spinner>
-                    :
-                    noProjects?
-                        <h1 className="text-center">Project Coming Soon</h1>
-                    :
-                    show.map((item:Project) => 
-                        <Col 
-                            className="projectColumn"
-                            xs={12} md={6} lg={3} 
-                            key={item._id}>
-                            <RadProjectCard project={item}/>
-                        </Col>
-                    )
-                }
-            </Row>
-        </Container>
-        <Container>
-            <Row className="justify-content-center">
-                <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
-            </Row>
-        </Container>
-        <MoveMeToTop />
+            <Helmet>
+                <title>Ikemous | Projects</title>
+                <meta name="description" content="View Ike's Projects and filter by technology" />
+            </Helmet>
+            <Container className="projectsContainer" fluid>
+                <DottedBackground />
+                <FilterProjectsForm />
+                <Row className="justify-content-center projectsRow">
+                    {loading?
+                        <Spinner animation="border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </Spinner>
+                        :
+                        noProjects?
+                            <h1 className="text-center">Project Coming Soon</h1>
+                        :
+                        show.map((item:Project) => 
+                            <Col 
+                                className="projectColumn"
+                                xs={12} md={6} lg={3} 
+                                key={item._id}>
+                                <RadProjectCard project={item}/>
+                            </Col>
+                        )
+                    }
+                </Row>
+            </Container>
+            <Container>
+                <Row className="justify-content-center">
+                    <Pagnation length={projects.length} pagnationPosition={pagnationPosition} />
+                </Row>
+            </Container>
+            <MoveMeToTop />
         </>
     );
 };
