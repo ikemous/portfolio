@@ -3,6 +3,7 @@
     width: 15vh;
     border-radius: 50%;
     position: fixed;
+    opacity: 70%;
 }
 
 .dottedContainer {
